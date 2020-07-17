@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         androidList.add(new AndroidVersion("Oreo", "8.0 - 8.1"));
         androidList.add(new AndroidVersion("Nougat", "7.0 - 7.1.2"));
 
-        ArrayAdapter<AndroidVersion> aList = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,androidList);
-        lvAndroid.setAdapter(aList);
+//        ArrayAdapter<AndroidVersion> aList = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,androidList);
+        CustomAdapter adapter = new CustomAdapter(this,R.layout.row, androidList);
+        lvAndroid.setAdapter(adapter);
     }
 }
